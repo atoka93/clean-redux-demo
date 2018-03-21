@@ -1,0 +1,42 @@
+ext {
+    reduxVersion = '1.0.0'
+    rxJavaVersion = '2.1.10'
+    rxAndroidVersion = '2.0.2'
+    rxRelayVersion = '2.0.0'
+    gsonVersion = '2.8.2'
+    retrofitVersion = '2.3.0'
+    supportLibraryVersion = '27.1.0'
+    constraintLayoutVersion = '1.0.2'
+
+    kotlinStdlib = "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlinVersion"
+
+    demoDependencies = [
+            kotlinStdlib           : kotlinStdlib,
+            reduxAndroid           : "net.attilaszabo.redux:redux-kotlin-base-implementation-android:$reduxVersion",
+            rxJava                 : "io.reactivex.rxjava2:rxjava:$rxJavaVersion",
+            rxAndroid              : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
+            rxRelay                : "com.jakewharton.rxrelay2:rxrelay:$rxRelayVersion",
+            supportAppcompat       : "com.android.support:appcompat-v7:$supportLibraryVersion",
+            supportRecyclerView    : "com.android.support:recyclerview-v7:$supportLibraryVersion",
+            supportDesign          : "com.android.support:design:$supportLibraryVersion",
+            supportCardView        : "com.android.support:cardview-v7:$supportLibraryVersion",
+            supportConstraintLayout: "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
+    ]
+
+    domainDependencies = [
+            kotlinStdlib: kotlinStdlib,
+            redux       : "net.attilaszabo.redux:redux-kotlin:$reduxVersion"
+    ]
+
+    dataDependencies = [
+            kotlinStdlib: kotlinStdlib
+    ]
+
+    dataSourcesDependencies = [
+            kotlinStdlib            : kotlinStdlib,
+            gson                    : "com.google.code.gson:gson:$gsonVersion",
+            retrofit                : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            retrofitGsonConverter   : "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+            retrofitScalarsConverter: "com.squareup.retrofit2:converter-scalars:$retrofitVersion"
+    ]
+}

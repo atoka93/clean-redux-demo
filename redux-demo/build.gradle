@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        applicationId "net.attilaszabo.redux"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':redux-demo-domain')
+    implementation project(':redux-demo-data-sources')
+
+    def dependencies = rootProject.ext.demoDependencies
+    implementation dependencies.kotlinStdlib
+    implementation dependencies.reduxAndroid
+    implementation dependencies.rxJava
+    implementation dependencies.rxAndroid
+    implementation dependencies.rxRelay
+    implementation dependencies.supportAppcompat
+    implementation dependencies.supportRecyclerView
+    implementation dependencies.supportDesign
+    implementation dependencies.supportCardView
+    implementation dependencies.supportConstraintLayout
+}

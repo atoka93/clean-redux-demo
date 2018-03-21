@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Redux Demo</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Log In</string>
+    <string name="hello_world">Hello World!</string>
+    <string name="please_login">Please log in.</string>
+    <string name="retry">Retry</string>
+</resources>

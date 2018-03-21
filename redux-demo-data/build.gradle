@@ -1,0 +1,10 @@
+apply plugin: 'kotlin'
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':redux-demo-domain')
+    api project(':redux-demo-state')
+
+    implementation rootProject.ext.dataDependencies.kotlinStdlib
+}

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/activityLoginStartGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/default_spacing"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/activityLoginEndGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/default_spacing"/>
+
+    <TextView
+        android:id="@+id/activityLoginHelloWorldTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/please_login"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/activityLoginUsernameEditText"
+        app:layout_constraintEnd_toEndOf="@+id/activityLoginEndGuideline"
+        app:layout_constraintStart_toStartOf="@+id/activityLoginStartGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <EditText
+        android:id="@+id/activityLoginUsernameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_spacing_enormous"
+        android:hint="@string/username"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/activityLoginPasswordEditText"
+        app:layout_constraintEnd_toEndOf="@+id/activityLoginEndGuideline"
+        app:layout_constraintStart_toStartOf="@+id/activityLoginStartGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/activityLoginHelloWorldTextView"/>
+
+    <EditText
+        android:id="@+id/activityLoginPasswordEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_spacing_small"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/activityLoginLoginButton"
+        app:layout_constraintEnd_toEndOf="@+id/activityLoginEndGuideline"
+        app:layout_constraintStart_toStartOf="@+id/activityLoginStartGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/activityLoginUsernameEditText"/>
+
+    <Button
+        android:id="@+id/activityLoginLoginButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_spacing_huge"
+        android:hint="@string/login"
+        app:layout_constraintBottom_toTopOf="@+id/activityLoginErrorTextView"
+        app:layout_constraintEnd_toEndOf="@+id/activityLoginEndGuideline"
+        app:layout_constraintStart_toStartOf="@+id/activityLoginStartGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/activityLoginPasswordEditText"/>
+
+    <TextView
+        android:id="@+id/activityLoginErrorTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_spacing"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/activityLoginEndGuideline"
+        app:layout_constraintStart_toStartOf="@+id/activityLoginStartGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/activityLoginLoginButton"/>
+
+    <ProgressBar
+        android:id="@+id/activityLoginProgressBar"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/activityLoginLoginButton"
+        app:layout_constraintEnd_toEndOf="@+id/activityLoginEndGuideline"
+        app:layout_constraintStart_toStartOf="@+id/activityLoginStartGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/activityLoginPasswordEditText"/>
+</android.support.constraint.ConstraintLayout>
