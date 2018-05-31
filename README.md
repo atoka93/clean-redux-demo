@@ -1,5 +1,5 @@
 # clean-redux-demo
-Sample application demonstrating an architecture based on the [clean architecture principles](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) and [Redux](https://redux.js.org/), using the [Kotlin Redux libraries](https://github.com/atoka93/redux-kotlin), for Android in Kotlin.
+Sample Android application in Kotlin showcasing an architecture combining [Redux](https://redux.js.org/) and the [Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) principles, using the [Kotlin Redux libraries](https://github.com/atoka93/redux-kotlin).
 
 ## Structure
 The application contains two screens:

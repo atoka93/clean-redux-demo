@@ -1,14 +1,14 @@
 ext {
-    reduxVersion = '1.0.0'
-    rxJavaVersion = '2.1.10'
+    reduxVersion = '1.0.1'
+    rxJavaVersion = '2.1.14'
     rxAndroidVersion = '2.0.2'
     rxRelayVersion = '2.0.0'
-    gsonVersion = '2.8.2'
-    retrofitVersion = '2.3.0'
+    gsonVersion = '2.8.5'
+    retrofitVersion = '2.4.0'
     supportLibraryVersion = '27.1.0'
-    constraintLayoutVersion = '1.0.2'
+    constraintLayoutVersion = '1.1.0'
 
-    kotlinStdlib = "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlinVersion"
+    kotlinStdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
 
     demoDependencies = [
             kotlinStdlib           : kotlinStdlib,
